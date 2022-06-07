@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/react-gh-pages/static/css/main.e647c505.chunk.css",
+    "main.js": "/react-gh-pages/static/js/main.99652df1.chunk.js",
+    "main.js.map": "/react-gh-pages/static/js/main.99652df1.chunk.js.map",
+    "runtime-main.js": "/react-gh-pages/static/js/runtime-main.07d3286d.js",
+    "runtime-main.js.map": "/react-gh-pages/static/js/runtime-main.07d3286d.js.map",
+    "static/js/2.255785ff.chunk.js": "/react-gh-pages/static/js/2.255785ff.chunk.js",
+    "static/js/2.255785ff.chunk.js.map": "/react-gh-pages/static/js/2.255785ff.chunk.js.map",
+    "index.html": "/react-gh-pages/index.html",
+    "static/css/main.e647c505.chunk.css.map": "/react-gh-pages/static/css/main.e647c505.chunk.css.map",
+    "static/js/2.255785ff.chunk.js.LICENSE.txt": "/react-gh-pages/static/js/2.255785ff.chunk.js.LICENSE.txt",
+    "static/media/iconmonstr-angel-left-thin.b74b51c4.svg": "/react-gh-pages/static/media/iconmonstr-angel-left-thin.b74b51c4.svg",
+    "static/media/iconmonstr-angel-right-thin.b282d2fc.svg": "/react-gh-pages/static/media/iconmonstr-angel-right-thin.b282d2fc.svg",
+    "static/media/shopping-cart.65d08ed8.svg": "/react-gh-pages/static/media/shopping-cart.65d08ed8.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.07d3286d.js",
+    "static/js/2.255785ff.chunk.js",
+    "static/css/main.e647c505.chunk.css",
+    "static/js/main.99652df1.chunk.js"
+  ]
+}
