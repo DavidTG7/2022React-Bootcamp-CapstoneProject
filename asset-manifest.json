@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/2022React-Bootcamp-CapstoneProject/static/css/main.e647c505.chunk.css",
-    "main.js": "/2022React-Bootcamp-CapstoneProject/static/js/main.99652df1.chunk.js",
-    "main.js.map": "/2022React-Bootcamp-CapstoneProject/static/js/main.99652df1.chunk.js.map",
-    "runtime-main.js": "/2022React-Bootcamp-CapstoneProject/static/js/runtime-main.6794d60d.js",
-    "runtime-main.js.map": "/2022React-Bootcamp-CapstoneProject/static/js/runtime-main.6794d60d.js.map",
-    "static/js/2.4908a57f.chunk.js": "/2022React-Bootcamp-CapstoneProject/static/js/2.4908a57f.chunk.js",
-    "static/js/2.4908a57f.chunk.js.map": "/2022React-Bootcamp-CapstoneProject/static/js/2.4908a57f.chunk.js.map",
+    "main.js": "/2022React-Bootcamp-CapstoneProject/static/js/main.10fe9adb.chunk.js",
+    "main.js.map": "/2022React-Bootcamp-CapstoneProject/static/js/main.10fe9adb.chunk.js.map",
+    "runtime-main.js": "/2022React-Bootcamp-CapstoneProject/static/js/runtime-main.1bbbd620.js",
+    "runtime-main.js.map": "/2022React-Bootcamp-CapstoneProject/static/js/runtime-main.1bbbd620.js.map",
+    "static/js/2.68beb071.chunk.js": "/2022React-Bootcamp-CapstoneProject/static/js/2.68beb071.chunk.js",
+    "static/js/2.68beb071.chunk.js.map": "/2022React-Bootcamp-CapstoneProject/static/js/2.68beb071.chunk.js.map",
     "index.html": "/2022React-Bootcamp-CapstoneProject/index.html",
     "static/css/main.e647c505.chunk.css.map": "/2022React-Bootcamp-CapstoneProject/static/css/main.e647c505.chunk.css.map",
-    "static/js/2.4908a57f.chunk.js.LICENSE.txt": "/2022React-Bootcamp-CapstoneProject/static/js/2.4908a57f.chunk.js.LICENSE.txt",
+    "static/js/2.68beb071.chunk.js.LICENSE.txt": "/2022React-Bootcamp-CapstoneProject/static/js/2.68beb071.chunk.js.LICENSE.txt",
     "static/media/iconmonstr-angel-left-thin.b74b51c4.svg": "/2022React-Bootcamp-CapstoneProject/static/media/iconmonstr-angel-left-thin.b74b51c4.svg",
     "static/media/iconmonstr-angel-right-thin.b282d2fc.svg": "/2022React-Bootcamp-CapstoneProject/static/media/iconmonstr-angel-right-thin.b282d2fc.svg",
     "static/media/shopping-cart.65d08ed8.svg": "/2022React-Bootcamp-CapstoneProject/static/media/shopping-cart.65d08ed8.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.6794d60d.js",
-    "static/js/2.4908a57f.chunk.js",
+    "static/js/runtime-main.1bbbd620.js",
+    "static/js/2.68beb071.chunk.js",
     "static/css/main.e647c505.chunk.css",
-    "static/js/main.99652df1.chunk.js"
+    "static/js/main.10fe9adb.chunk.js"
   ]
 }
