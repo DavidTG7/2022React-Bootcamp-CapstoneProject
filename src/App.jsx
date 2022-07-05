@@ -6,6 +6,7 @@ import ProductList from './components/ProductList/ProductList';
 import { SearchResults } from './components/SearchResults/SearchsResults';
 import { ShoppingCart } from './components/ShoppingCart/ShoppingCart';
 import { ROUTES } from './utils/constants';
+import { Checkout } from './components/Checkout/Checkout';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
           <Route path={`${ROUTES.productDetail}/:id`} element={<ProductDetail />} />
           <Route path={`${ROUTES.searchResults}`} element={<SearchResults />} />
           <Route path={ROUTES.shoppingCart} element={<ShoppingCart />} />
+          <Route path={ROUTES.checkout} element={<Checkout />} />
         </Routes>
       </AppContextProvider>
       <Footer text='Ecommerce created during Wizeline’s Academy React Bootcamp' />

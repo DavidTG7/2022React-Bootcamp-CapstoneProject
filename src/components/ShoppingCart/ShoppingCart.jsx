@@ -1,7 +1,9 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { AppContext } from '../../Context/AppContext';
 import { ReactComponent as BinButton } from '../../images/bin.svg';
+import { CheckoutBox } from './CheckoutBox/CheckoutBox';
 import { Prices } from './Prices/Prices';
+import { handleAddAmount, handleSubstractAmount } from './ShoppingCart.helper';
 import {
   RowItem,
   Image,
@@ -15,28 +17,16 @@ import {
 export const ShoppingCart = () => {
 
   const { shoppingCart, setShoppingCart } = useContext(AppContext);
-  // const [totalAmount, setTotalAmount] = useState(0)
-   
 
-  const handleClick = (id) => {
+  const handleDelete = (id) => {
     console.log('Got clicked', id);
     const filtered = shoppingCart.filter(item => item.id !== id);
     setShoppingCart(filtered)
   }
-  
       
-  const substractAmount = (id, amount) => {
-    console.log(shoppingCart, id, amount);
-    const mapped = shoppingCart.map(element => {
-      if (element.id === id && amount > 1) {
-        element.amount -= 1;
-      }
-      return element;
-    });
+  const substractAmount = handleSubstractAmount(shoppingCart, setShoppingCart)
 
-    setShoppingCart(mapped);
-  }
-  
+  const addAmount = handleAddAmount(shoppingCart, setShoppingCart)
   
   const allElements = shoppingCart.map((item, i) => {
     const {
@@ -50,7 +40,6 @@ export const ShoppingCart = () => {
     
     const subtotal = price * amount;
     
-
     return(
       <RowItem key={`row-${i}`}>
         <Image src={url} alt={alt} />
@@ -60,10 +49,12 @@ export const ShoppingCart = () => {
           <AmountControllerButton 
             onClick={() => substractAmount(id, amount)}>-</AmountControllerButton>
           <Amount>{amount}</Amount>
-          <AmountControllerButton>+</AmountControllerButton>
+          <AmountControllerButton
+            onClick={() => addAmount(id, amount)}
+          >+</AmountControllerButton>
         </AmountWrapper>
         <BinButtonWrapper>
-          <BinButton onClick={() => handleClick(id)}/>
+          <BinButton onClick={() => handleDelete(id)}/>
         </BinButtonWrapper>
       </RowItem>
     );
@@ -80,6 +71,8 @@ export const ShoppingCart = () => {
   return(
     <MainWrapper>
      { allElements}
+     <CheckoutBox total={total}/>
     </MainWrapper>
   );
 }
+

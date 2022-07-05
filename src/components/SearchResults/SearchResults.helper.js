@@ -9,10 +9,15 @@ import {
   Title,
   } from './SearchResults.styles';
 
-export function searchCardGenerator(result) {
+export function searchCardGenerator(
+  result,
+  customHandleClick,
+  shoppingCart,
+  setShoppingCart ) {
 
   return result?.results?.map((item, i) => {
-    const { data: {
+    console.log(item);
+    const { id, data: {
       name, price, short_description, category: {
         slug,
       }, mainimage: {
@@ -30,7 +35,15 @@ export function searchCardGenerator(result) {
         <Category>{slug.replace('--', ' & ')}</Category>
         <Description>{short_description}</Description>
         <Price>$ {price}</Price>
-        <AddToCartButton />
+        <AddToCartButton handleClick={() => customHandleClick(
+          id,
+          shoppingCart,
+          setShoppingCart,
+          name,
+          url,
+          alt,
+          price
+        )}/>
       </ResultWrapper>
     );
   });

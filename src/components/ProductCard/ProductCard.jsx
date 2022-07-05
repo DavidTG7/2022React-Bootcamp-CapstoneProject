@@ -1,9 +1,8 @@
 import React, { useContext } from 'react';
 import { AppContext } from '../../Context/AppContext';
 import { ROUTES } from '../../utils/constants';
-import { useHandleClick } from '../../utils/hooks/useAddToCart';
 import { AddToCartButton } from '../AddToCartButton/AddToCartButton';
-
+import { customHandleClick } from '../../utils/customHandleClick';
 import { 
   ButtonWrapper,
   ImageWrap,
@@ -19,7 +18,6 @@ export function ProductCard({ item, listPageCard }) {
   const {
     id,
     data: {
-      stock,
       mainimage: {
         url,
         alt,
@@ -32,16 +30,7 @@ export function ProductCard({ item, listPageCard }) {
     },
   } = item;
   
-  
   const { shoppingCart, setShoppingCart } = useContext(AppContext);
-  
-  const handleClick = useHandleClick(stock,
-    shoppingCart,
-    setShoppingCart,
-    name,
-    url,
-    alt,
-    price);
   
   return (
     <ImageWrap key={id} listPageCard={listPageCard}>
@@ -54,7 +43,14 @@ export function ProductCard({ item, listPageCard }) {
         </LinkDetail>
         <h2>{slug.replaceAll('--', ' & ')}</h2>
         <ButtonWrapper>
-          <AddToCartButton smaller handleClick={handleClick}/>
+          <AddToCartButton smaller handleClick={() => customHandleClick(
+            id,
+            shoppingCart,
+            setShoppingCart,
+            name,
+            url,
+            alt,
+            price)}/>
         </ButtonWrapper>
         <p>${price}</p>
       </InfoImage>
