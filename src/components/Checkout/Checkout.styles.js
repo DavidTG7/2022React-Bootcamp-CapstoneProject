@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom'
 import {
   bluePrince,
   white,
@@ -19,3 +20,29 @@ export const CheckoutMain = styled.main`
   }
 `;
 
+export const ButtonsWrapper = styled.div`
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  margin-top: 2rem;
+`;
+
+export const LinkButton = styled(Link)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border-radius: .3rem;
+  height: 2.5rem;
+  width: 15rem;
+  border: none;
+  text-decoration: none;
+  background: ${bluePrince};
+  color: ${white};
+  &:hover {
+    background: ${yellowMain};
+    color: ${bluePrince};
+  }
+`;

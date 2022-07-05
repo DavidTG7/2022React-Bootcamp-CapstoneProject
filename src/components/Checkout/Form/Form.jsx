@@ -10,7 +10,7 @@ export const Form = () => {
       <Input type='email' required />
       <Label>Post/Zip code:</Label>
       <Input type='text' />
-      <TextArea rows='5'>Notes about your purchasing...</TextArea>
+      <TextArea rows='5' placeholder='Notes about your purchasing...' />
     </FormMain>
   );
 }
