@@ -1,9 +1,11 @@
 import styled from 'styled-components';
-import { bluePrince, grey, white, whiteApple, yellowMain } from '../../utils/constant.styles';
+import {
+  bluePrince,
+  white,
+  whiteApple,
+  yellowMain } from '../../utils/constant.styles';
 
 export const MainWrapper = styled.main`
-  /* display: flex;
-  flex-flow: column; */
   margin: 50px auto 0;
   width: 135em;
   color: ${bluePrince};
@@ -11,7 +13,6 @@ export const MainWrapper = styled.main`
   @media screen and (max-width: 1400px){
     width: 90%;
   }
-  
   `;
 
 export const RowItem = styled.div`
@@ -27,7 +28,6 @@ export const RowItem = styled.div`
 `;
 
 export const Image = styled.img`
-
   width: 6rem;
 `;
 
@@ -39,7 +39,7 @@ width: 15%;
 `;
 
 export const Amount = styled.label`
-
+  font-weight: 400;
 `;
 
 export const BinButtonWrapper = styled.button`

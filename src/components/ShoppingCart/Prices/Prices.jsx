@@ -13,7 +13,7 @@ export const Prices = ({ unitPrice, totalPrice }) => {
         <Price>{unitPrice}</Price>
       </PriceWrapper>
       <PriceWrapper>
-        <PriceTitle>TOTAL PRICE</PriceTitle>
+        <PriceTitle>SUBTOTAL</PriceTitle>
         <Price>{totalPrice}</Price>
       </PriceWrapper>
     </>

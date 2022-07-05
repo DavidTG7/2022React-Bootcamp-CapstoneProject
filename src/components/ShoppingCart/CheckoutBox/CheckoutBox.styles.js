@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { bluePrince, white, whiteApple, yellowMain } from '../../../utils/constant.styles';
+import { bluePrince,
+  white,
+  whiteApple,
+  yellowMain } from '../../../utils/constant.styles';
 
 export const CheckoutMain = styled.div`
 gap: 3rem;
