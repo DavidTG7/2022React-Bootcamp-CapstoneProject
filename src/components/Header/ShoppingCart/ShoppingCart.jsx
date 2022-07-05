@@ -7,12 +7,7 @@ import { ButtonCart, CartWrapper, ItemCounter } from './ShoppingCart.styles';
 export const  ShoppingCartButton = () => {
 
 const { shoppingCart } = useContext(AppContext);
-  let total = 0;
-  shoppingCart.forEach(item => {
-    const actualValue = Number(item.amount);
-    return total += actualValue;
-  });
-  console.log('counter', total);
+  let total = shoppingCart.length;
   
   return(
     <CartWrapper>

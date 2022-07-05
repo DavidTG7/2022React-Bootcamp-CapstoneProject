@@ -38,23 +38,6 @@ text-transform: uppercase;
 width: 15%;
 `;
 
-export const UnitPriceWrapper = styled.div`
-text-align: center;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  width: 10%;
-`;
-
-export const UnitPriceTitle = styled.label`
-  font-size: 1rem;
-`;
-
-export const Price = styled.label`
-  color: ${grey};
-  font-weight: 600;
-`;
-
 export const Amount = styled.label`
 
 `;

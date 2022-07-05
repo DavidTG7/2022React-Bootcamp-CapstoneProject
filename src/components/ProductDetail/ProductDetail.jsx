@@ -29,6 +29,7 @@ export function ProductDetail() {
   console.log({jsonData});
 
   const { 
+    id,
     data: {
       name,
       mainimage: {
@@ -55,16 +56,29 @@ export function ProductDetail() {
   const [inputValue, setInputValue] = useState(1);
 
   function handleClick() {
+    console.log(id);
     setActualStock(actualStock - inputValue);
-    if (inputValue > 0) {
+    
+    if (inputValue > 0 && !shoppingCart.some(item => item.id === id)) {
       setShoppingCart([...shoppingCart,
         {
+          id,
           name,
           url,
           alt,
           price,
-          amount: inputValue,
+          amount: Number(inputValue),
         }])
+    } else if (shoppingCart.some(item => item.id === id)) {
+
+      const shoppingCartMapped = shoppingCart.map(elem => {
+        if (elem.id === id) {
+          elem.amount += Number(inputValue);
+        }
+        return elem
+      })
+
+      setShoppingCart(shoppingCartMapped)
     } else {
       alert('The minimum amount is 1')
       return;
