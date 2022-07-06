@@ -16,7 +16,6 @@ export function searchCardGenerator(
   setShoppingCart ) {
 
   return result?.results?.map((item, i) => {
-    console.log(item);
     const { id, data: {
       name, price, short_description, category: {
         slug,

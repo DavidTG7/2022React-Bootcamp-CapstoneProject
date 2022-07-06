@@ -28,7 +28,6 @@ export function useProductsSearch({ tags, lang = 'en-us', pageSize = 16 }) {
         );
 
         const data = await response.json();
-        console.log('data hook', data);
 
         setFeaturedBanners({ data: data, isLoading: false });
       } catch (err) {

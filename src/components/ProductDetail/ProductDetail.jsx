@@ -23,10 +23,8 @@ import { AddToCartButton } from '../AddToCartButton/AddToCartButton';
 
 export function ProductDetail() {
   const { shoppingCart, setShoppingCart } = useContext(AppContext);
-  console.log('shop', shoppingCart);
   const location = useLocation();
   const jsonData = location.state;
-  console.log({jsonData});
 
   const { 
     id,
@@ -56,7 +54,6 @@ export function ProductDetail() {
   const [inputValue, setInputValue] = useState(1);
 
   function handleClick() {
-    console.log(id);
     setActualStock(actualStock - inputValue);
     
     if (inputValue > 0 && !shoppingCart.some(item => item.id === id)) {
@@ -84,12 +81,10 @@ export function ProductDetail() {
       return;
     }
   }
-
   
   function handleChange(e) {
     const value = e.target.value;
     setInputValue(value)
-    console.log('value', value);
   }
 
   return (

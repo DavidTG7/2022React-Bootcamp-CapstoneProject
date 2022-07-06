@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import {
   bluePrince,
   white,
-  whiteApple,
   yellowMain } from '../../utils/constant.styles';
 
 export const CheckoutMain = styled.main`

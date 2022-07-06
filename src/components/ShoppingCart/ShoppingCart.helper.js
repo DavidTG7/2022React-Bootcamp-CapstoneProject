@@ -1,6 +1,5 @@
 export function handleSubstractAmount(shoppingCart, setShoppingCart) {
   return (id, amount) => {
-    console.log(shoppingCart, id, amount);
     const mapped = shoppingCart.map(element => {
       if (element.id === id && amount > 1) {
         element.amount -= 1;
@@ -14,7 +13,6 @@ export function handleSubstractAmount(shoppingCart, setShoppingCart) {
 
 export function handleAddAmount(shoppingCart, setShoppingCart) {
   return (id, amount) => {
-    console.log(shoppingCart, id, amount);
     const mapped = shoppingCart.map(element => {
       if (element.id === id && amount >= 1) {
         element.amount += 1;

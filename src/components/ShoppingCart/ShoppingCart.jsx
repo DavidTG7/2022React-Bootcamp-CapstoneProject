@@ -19,7 +19,6 @@ export const ShoppingCart = () => {
   const { shoppingCart, setShoppingCart } = useContext(AppContext);
 
   const handleDelete = (id) => {
-    console.log('Got clicked', id);
     const filtered = shoppingCart.filter(item => item.id !== id);
     setShoppingCart(filtered)
   }
@@ -65,9 +64,7 @@ export const ShoppingCart = () => {
     const value = element.props.children[2].props.totalPrice;
     return total += value;
   })
-  
-  console.log({total, shoppingCart, allElements});
-  
+    
   return(
     <MainWrapper>
      { allElements}
@@ -75,4 +72,3 @@ export const ShoppingCart = () => {
     </MainWrapper>
   );
 }
-
