@@ -4,9 +4,7 @@ import {
   bluePrince,
   darkRed,
   grey,
-  white,
-  whiteApple, 
-  yellowMain} from '../../utils/constant.styles';
+  whiteApple } from '../../utils/constant.styles';
 
 export const DetailMain = styled.main`
   width: 135em;
@@ -38,6 +36,10 @@ export const SliderWrapper = styled.div`
   padding: 1.5rem;
   border-radius: .5rem;
   box-shadow:  0 5px 20px ${appleGreenBackground};    
+
+  @media screen and (max-width: 800px){
+    margin: 1.5rem;
+  }
 `;
 
 export const InfoWrapper = styled.div`
@@ -50,6 +52,16 @@ export const InfoWrapper = styled.div`
   margin: 2rem 4rem;
   padding: 2rem;
   border-radius: .5rem;
+
+  @media screen and (max-width: 1000px) {
+    padding: .5rem;
+    margin: 2rem 1.5rem 2rem .2rem;
+  }
+
+  @media screen and (max-width: 800px) {
+    padding: .5rem;
+    margin: 2rem 1rem;
+  }
 `;
 
 export const Title = styled.label`
@@ -131,31 +143,16 @@ export const Stock = styled.span`
   font-size: 1.3rem;
 `;
 
-export const AddToCartButton = styled.button.attrs({ 
-  type: 'submit',
-})`
-  cursor: pointer;
-  font-size: 1.1rem;
-  border: none;
-  border-radius: .3rem;
-  width: 10rem;
-  height: 2.6rem;
-  color: ${white};
-  font-weight: 600;
-  background: ${bluePrince};
-  box-shadow:  0 5px 20px ${appleGreenBackground};  
-
-  &:hover {
-    background: ${yellowMain};
-    color: ${bluePrince};
-  }
-`;
-export const Table = styled.table`
-  margin: .5rem auto;
-`;
-
 export const TBody = styled.tbody`
   text-align: left;
   font-size: .8rem;
   width: 25rem;
+`;
+
+export const Table = styled.table`
+  margin: .5rem auto;
+`;
+
+export const OutOfStock = styled.p`
+  font-size: 3rem;
 `;

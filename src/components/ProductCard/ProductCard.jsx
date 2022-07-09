@@ -1,9 +1,9 @@
-import React from 'react';
-import { ReactComponent as ShoppingCart } from '../../images/shopping-cart.svg';
+import React, { useContext } from 'react';
+import { AppContext } from '../../Context/AppContext';
 import { ROUTES } from '../../utils/constants';
-
+import { AddToCartButton } from '../AddToCartButton/AddToCartButton';
+import { customHandleClick } from '../../utils/customHandleClick';
 import { 
-  ButtonCart,
   ButtonWrapper,
   ImageWrap,
   InfoImage,
@@ -11,27 +11,49 @@ import {
   LinkStyled,
   ProductImage } from './ProductCard.styles';
 
-export function ProductCard({ item }) {
+export function ProductCard({ item, listPageCard }) {
+
   const itemRoute = `${ROUTES.productDetail}/${item.id}`;
-  const product = item.data;
+  
+  const {
+    id,
+    data: {
+      mainimage: {
+        url,
+        alt,
+      },
+      name,
+      category: {
+        slug,
+      },
+      price,
+    },
+  } = item;
+  
+  const { shoppingCart, setShoppingCart } = useContext(AppContext);
+  
   return (
-    <ImageWrap key={item.id}>
+    <ImageWrap key={id} listPageCard={listPageCard}>
       <LinkStyled to={itemRoute} state={item}>
-        <ProductImage src={product.mainimage.url} alt={product.mainimage.alt} />
+        <ProductImage src={url} alt={alt} />
       </LinkStyled>
       <InfoImage>
         <LinkDetail to={itemRoute} state={item}>
-          <h1>{product.name}</h1>
+          <h1>{name}</h1>
         </LinkDetail>
-        <h2>{product.category.slug.replaceAll('--', ' & ')}</h2>
+        <h2>{slug.replaceAll('--', ' & ')}</h2>
         <ButtonWrapper>
-          <ButtonCart to={itemRoute} state={item}>
-            <ShoppingCart />
-          </ButtonCart>
+          <AddToCartButton smaller handleClick={() => customHandleClick(
+            id,
+            shoppingCart,
+            setShoppingCart,
+            name,
+            url,
+            alt,
+            price)}/>
         </ButtonWrapper>
-        <p>${product.price}</p>
+        <p>${price}</p>
       </InfoImage>
     </ImageWrap>
   );
 }
-

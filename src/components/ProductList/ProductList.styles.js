@@ -7,7 +7,7 @@ import {
   whiteApple,
   yellowMain } from "../../utils/constant.styles";
 
-export const ProductListMain = styled.div`
+export const ProductListMain = styled.main`
   margin: 2.5rem auto;
   display: flex;
   flex-flow: row;

@@ -1,5 +1,5 @@
 import { ROUTES } from '../../utils/constants';
-import { AddToCartButton } from '../ProductDetail/ProductDetail.styles';
+import { AddToCartButton } from '../AddToCartButton/AddToCartButton';
 import {
   Category,
   Description,
@@ -9,10 +9,14 @@ import {
   Title,
   } from './SearchResults.styles';
 
-export function searchCardGenerator(result) {
+export function searchCardGenerator(
+  result,
+  customHandleClick,
+  shoppingCart,
+  setShoppingCart ) {
 
   return result?.results?.map((item, i) => {
-    const { data: {
+    const { id, data: {
       name, price, short_description, category: {
         slug,
       }, mainimage: {
@@ -30,7 +34,15 @@ export function searchCardGenerator(result) {
         <Category>{slug.replace('--', ' & ')}</Category>
         <Description>{short_description}</Description>
         <Price>$ {price}</Price>
-        <AddToCartButton>ADD TO CART</AddToCartButton>
+        <AddToCartButton handleClick={() => customHandleClick(
+          id,
+          shoppingCart,
+          setShoppingCart,
+          name,
+          url,
+          alt,
+          price
+        )}/>
       </ResultWrapper>
     );
   });
