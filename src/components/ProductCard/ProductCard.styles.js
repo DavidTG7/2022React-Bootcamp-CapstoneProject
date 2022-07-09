@@ -38,6 +38,10 @@ export const ImageWrap = styled.div`
   @media screen and (max-width: 806px){
     width: 30rem;
   }
+
+  @media screen and (max-width: 480px){
+    width: 22rem;
+  }
 `;
 
 export const InfoImage = styled.div`

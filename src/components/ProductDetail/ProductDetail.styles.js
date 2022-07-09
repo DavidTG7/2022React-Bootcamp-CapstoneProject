@@ -36,6 +36,10 @@ export const SliderWrapper = styled.div`
   padding: 1.5rem;
   border-radius: .5rem;
   box-shadow:  0 5px 20px ${appleGreenBackground};    
+
+  @media screen and (max-width: 800px){
+    margin: 1.5rem;
+  }
 `;
 
 export const InfoWrapper = styled.div`
@@ -48,6 +52,16 @@ export const InfoWrapper = styled.div`
   margin: 2rem 4rem;
   padding: 2rem;
   border-radius: .5rem;
+
+  @media screen and (max-width: 1000px) {
+    padding: .5rem;
+    margin: 2rem 1.5rem 2rem .2rem;
+  }
+
+  @media screen and (max-width: 800px) {
+    padding: .5rem;
+    margin: 2rem 1rem;
+  }
 `;
 
 export const Title = styled.label`

@@ -38,6 +38,7 @@ export const Name = styled.h1`
   height: 100%;
   display: flex;
   align-items: center;
+  text-align: center;
 
   @media screen and (max-width: 800px) {
     justify-content: center;
